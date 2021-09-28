@@ -13,6 +13,10 @@ namespace API.Data
         //Lista de propriedades que vão virar tabela no banco
 
         public DbSet<Funcionario> Funcionarios { get; set; }
+
+        public DbSet<Administrativo> Administrativos { get; set; }
+
+        public DbSet<Viagem> Viagens { get; set; }
     }
 
 }

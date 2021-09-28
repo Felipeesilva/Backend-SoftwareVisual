@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("api/funcionario")]
+    [Route("api/administrativo")]
     public class AdministrativoController : ControllerBase
     {
       private readonly DataContext _context;
@@ -48,12 +48,12 @@ namespace API.Controllers
 
       //DELETE: /api/administrativo/delete/nome
       [HttpDelete]
-      [Route("delete/{name}")]
-      public IActionResult Delete([FromRoute] string name)
+      [Route("delete/{responsavel}")]
+      public IActionResult Delete([FromRoute] string responsavel)
       {
         // Expressão Lambda
         // Buscar um objeto na tabela de produtos com base no nome
-        Administrativo administrativo = _context.Administrativos.FirstOrDefault(funcionario => administrativo.Nome == name);
+        Administrativo administrativo = _context.Administrativos.FirstOrDefault(administrativo => administrativo.Responsavel == responsavel);
         if(administrativo == null)
         {
           return NotFound();

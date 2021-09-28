@@ -10,11 +10,10 @@ namespace API.Models
         public int Id { get; set; }
         public string Responsavel { get; set; }
         public string MatriculaAdm { get; set; }
-        public string AprovaSolicitacao { get; set; }
         public DateTime CriadoEm { get; set; }
 
         public override string ToString() =>
-            $"Nome: {Responsavel} | Matricula: {MatriculaAdm} | Aprova Solicitação: {AprovaSolicitacao} | Criado Em: {CriadoEm} ";
+            $"Nome: {Responsavel} | Matricula: {MatriculaAdm} | Criado Em: {CriadoEm} ";
         
     }
 }
