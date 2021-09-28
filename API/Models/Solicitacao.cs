@@ -1,6 +1,7 @@
 // PROP - cria a propriedade
 
 using System;
+using funcionario = List<Funcionario>;
 
 namespace API.Models
 {
@@ -14,7 +15,8 @@ namespace API.Models
         public string DataRetorno { get; set; }
         public string Finalidade { get; set; }
         public DateTime CriadoEm { get; set; }
-        
+        public List<Funcionario> Funcionarios {get; set;} = new List<Funcionario>(); 
+
         public override string ToString() =>
             $"Destino: {Destino} | DataPartida: {DataPartida} | DataRetorno: {DataRetorno}| Finalidade: {Finalidade} | CriadoEm: {CriadoEm} | ";
         

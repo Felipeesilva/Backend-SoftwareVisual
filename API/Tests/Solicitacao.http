@@ -7,7 +7,9 @@ Content-Type: application/json
     "destino": "Curitiba",
     "dataPartida": "2020/09/03",
     "dataRetorno": "2020/09/10",
-    "finalidade": "Ferias"
+    "finalidade": "Ferias",
+    "Matricula": "123"
+
 }
 
 ### Listar todos as viagens
