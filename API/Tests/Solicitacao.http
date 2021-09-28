@@ -1,0 +1,33 @@
+### Cadastrar uma nova viagem
+POST https://localhost:5001/api/solicitacao/create
+Content-Type: application/json
+
+{
+    
+    "destino": "Curitiba",
+    "dataPartida": "2020/09/03",
+    "dataRetorno": "2020/09/10",
+    "finalidade": "Ferias"
+}
+
+### Listar todos as viagens
+GET https://localhost:5001/api/solicitacao/list
+
+### Buscar uma viagem pelo ID
+GET https://localhost:5001/api/solicitacao/getbyid/1
+
+### deletar uma viagem pelo nome
+DELETE https://localhost:5001/api/solicitacao/delete/1
+
+###
+PUT  https://localhost:5001/api/solicitacao/update
+Content-Type: application/json
+
+{
+    "id" : 2,
+    "Destino": "Acapulco",
+    "DataPartida": "30/01/2022",
+    "DataRetorno": "01/02/2022",
+    "Finalidade": "ferias"
+
+}

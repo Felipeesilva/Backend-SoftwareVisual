@@ -16,7 +16,7 @@ namespace API.Data
 
         public DbSet<Administrativo> Administrativos { get; set; }
 
-        public DbSet<Viagem> Viagens { get; set; }
+        public DbSet<Solicitacao> Solicitacoes { get; set; }
     }
 
 }
