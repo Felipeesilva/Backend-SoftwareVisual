@@ -2,6 +2,7 @@ using System.Linq;
 using API.Data;
 using API.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
@@ -20,9 +21,14 @@ namespace API.Controllers
       [Route("create")]
       public IActionResult Create([FromBody] Solicitacao solicitacao)
       {
-          _context.Solicitacoes.Add(solicitacao);
-          _context.SaveChanges();
-          return Created("", solicitacao);
+        Funcionario funcionario = _context.Funcionarios.FirstOrDefault(funcionario => funcionario.Id == solicitacao.Funcionario.Id);
+        if(funcionario == null)
+        {
+          return NotFound();
+        }
+        _context.Solicitacoes.Add(solicitacao);
+        _context.SaveChanges();
+        return Created("", solicitacao);
       }
 
         //GET: api/solicitacao/list

@@ -3,7 +3,6 @@ POST https://localhost:5001/api/administrativo/create
 Content-Type: application/json
 
 {
-    "id" : 13,
     "responsavel": "Jhon",
     "matriculaAdm": "1"
 }
