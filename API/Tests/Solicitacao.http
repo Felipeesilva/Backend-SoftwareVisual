@@ -8,11 +8,8 @@ Content-Type: application/json
     "dataPartida": "2020/09/03",
     "dataRetorno": "2020/09/10",
     "finalidade": "Ferias",
+    "funcionarioId": 1
 
-    "funcionario": {
-        "Nome": "Gustavo"
-    }
-    
 }
 
 ### Listar todos as viagens

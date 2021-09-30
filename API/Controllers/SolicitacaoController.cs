@@ -21,11 +21,11 @@ namespace API.Controllers
       [Route("create")]
       public IActionResult Create([FromBody] Solicitacao solicitacao)
       {
-        Funcionario funcionario = _context.Funcionarios.FirstOrDefault(funcionario => funcionario.Id == solicitacao.Funcionario.Id);
+        /*Funcionario funcionario = _context.Funcionarios.FirstOrDefault(funcionario => funcionario.Id == solicitacao.Funcionario.Id);
         if(funcionario == null)
         {
           return NotFound();
-        }
+        }*/
         _context.Solicitacoes.Add(solicitacao);
         _context.SaveChanges();
         return Created("", solicitacao);
