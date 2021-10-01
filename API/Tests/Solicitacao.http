@@ -26,11 +26,10 @@ PUT  https://localhost:5001/api/solicitacao/update
 Content-Type: application/json
 
 {
-    
+    "id": 1,
     "Destino": "Acapulco",
     "DataPartida": "30/01/2022",
     "DataRetorno": "01/02/2022",
     "Finalidade": "ferias"
-
 
 }
