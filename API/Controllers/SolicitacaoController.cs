@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using API.Data;
 using API.Models;
@@ -21,11 +22,7 @@ namespace API.Controllers
       [Route("create")]
       public IActionResult Create([FromBody] Solicitacao solicitacao)
       {
-        /*Funcionario funcionario = _context.Funcionarios.FirstOrDefault(funcionario => funcionario.Id == solicitacao.Funcionario.Id);
-        if(funcionario == null)
-        {
-          return NotFound();
-        }*/
+        solicitacao.Funcionario = _context.Funcionarios.Find(solicitacao.FuncionarioId);
         _context.Solicitacoes.Add(solicitacao);
         _context.SaveChanges();
         return Created("", solicitacao);
@@ -34,7 +31,8 @@ namespace API.Controllers
         //GET: api/solicitacao/list
       [HttpGet]
       [Route("list")]
-      public IActionResult List() => Ok(_context.Solicitacoes.ToList());
+      public IActionResult List() => 
+        Ok(_context.Solicitacoes.Include(f => f.Funcionario).ToList());
       
 
       //GET: api/solicitacao/getbyid/1

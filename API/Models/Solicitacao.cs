@@ -2,8 +2,6 @@
 
 using System;
 
-using System.Collections.Generic;
-
 namespace API.Models
 {
     public class Solicitacao
@@ -16,7 +14,8 @@ namespace API.Models
         public string DataRetorno { get; set; }
         public string Finalidade { get; set; }
         public DateTime CriadoEm { get; set; }
-
+        // Relacionando com funcionario
+        public Funcionario Funcionario { get; set; }
         public int FuncionarioId { get; set; }
 
 
