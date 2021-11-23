@@ -1,0 +1,18 @@
+<h1 class="title" >LISTAR</h1>
+<a class="campoBox" routerLink="">Home</a>
+
+<a class="campoBox" routerLink="/solicitacao/cadastrar">Cadastrar</a>
+
+<ol>
+    <h3 class="listar">Lista de Solicitações</h3>
+    <li class="campoLi" *ngFor="let solicitacao of solicitacoes">
+        <h4>#{{ solicitacao.id}}</h4>
+        <h4>Destino: {{ solicitacao.destino }}</h4>
+        <h4>Data de Partida: {{ solicitacao.dataPartida }}</h4>
+        <h4>Data de Retorno: {{ solicitacao.dataRetorno }}</h4>
+        <h4>Finalidade: {{ solicitacao.finalidade }}</h4>
+        <button class="listButton" routerLink="/solicitacao/update/{{ solicitacao.destino }}">Editar</button>
+        <button class="listButton" (click)="deletar(solicitacao.id)">Deletar</button>
+    </li>
+</ol><br>
+

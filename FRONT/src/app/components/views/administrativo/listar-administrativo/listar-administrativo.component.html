@@ -1,0 +1,16 @@
+<h1 class="title" >LISTAR</h1>
+<a class="campoBox" routerLink="">Home</a>
+
+<a class="campoBox" routerLink="/administrativo/cadastrar">Cadastrar</a>
+
+<ol>
+    <h3 class="listar">Lista de administrativos</h3>
+    <li class="campoLi" *ngFor="let administrativo of administrativos">
+        <h4>#{{ administrativo.id}}</h4>
+        <h4>Responsável: {{ administrativo.responsavel }}</h4>
+        <h4>Matrícula Adm: {{ administrativo.matriculaAdm }}</h4>
+        <button class="listButton" routerLink="/administrativo/update/{{ administrativo.responsavel }}">Editar</button>
+        <button class="listButton" (click)="deletar(administrativo.responsavel)">Deletar</button>
+    </li>
+</ol><br>
+
