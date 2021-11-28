@@ -1,0 +1,19 @@
+<h1 class="title">Itens da Despesa</h1>
+
+<a class="home" routerLink="">Home</a>
+
+<div id="destino">
+    <label class="campoLabel" for="produto">Produto:</label>
+    <input type="text" class="campoBox" name="produto" [(ngModel)]="produto">
+</div>
+<div id="dataPartida">
+    <label class="campoLabel" for="quantidade">Quantidade:</label>
+    <input type="text" class="campoBox" name="dataRetorno" [(ngModel)]="quantidade">
+</div>
+<div id="dataRetorno">
+    <label class="campoLabel" for="preco">Preço:</label>
+    <input type="text" class="campoBox" name="dataRetorno" [(ngModel)]="preco">
+</div>
+
+
+<button class="cadastrar" (click)="cadastrar()">Cadastrar Item da Despesa</button><br>
