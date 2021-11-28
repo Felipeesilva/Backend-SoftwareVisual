@@ -1,5 +1,4 @@
 import { Pedido } from 'src/app/models/pedido';
-
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PedidoService } from 'src/app/services/pedido.service';
@@ -12,6 +11,7 @@ import { PedidoService } from 'src/app/services/pedido.service';
 export class CadastrarPedidoComponent implements OnInit {
 
   id!: number;
+  destino!: string;
   dataPartida!: string;
   dataRetorno!: string;
   finalidade!: string;
@@ -23,8 +23,10 @@ export class CadastrarPedidoComponent implements OnInit {
 
   cadastrar(): void {
     let pedido: Pedido = {
-      nome: this.nome,
-      matricula: this.matricula,
+      destino:this.destino,
+      dataPartida: this.dataPartida,
+      dataRetorno: this.dataRetorno,
+      finalidade: this.finalidade,
       criadoem!: this.criadoEm
     };
     this.service.create(pedido).subscribe((pedido) => {

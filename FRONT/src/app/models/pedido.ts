@@ -4,6 +4,6 @@ export interface Pedido
   destino: string;
   dataPartida: string;
   dataRetorno: string;
-  Finalidade: string;
+  finalidade: string;
   criadoem?: string;
 }

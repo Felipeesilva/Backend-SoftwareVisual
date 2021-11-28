@@ -1,38 +1,37 @@
+import { Pedido } from 'src/app/models/pedido';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { Funcionario } from 'src/app/models/funcionario';
-import { FuncionarioService } from 'src/app/services/funcionario.service';
+import { PedidoService } from 'src/app/services/pedido.service';
 
 @Component({
-  selector: 'app-listar-funcionario',
-  templateUrl: './listar-funcionario.component.html',
-  styleUrls: ['./listar-funcionario.component.css']
+  selector: 'app-listar-pedido',
+  templateUrl: './listar-pedido.component.html',
+  styleUrls: ['./listar-pedido.component.css']
 })
-export class ListarFuncionarioComponent implements OnInit {
+export class ListarPedidoComponent implements OnInit {
 
-  funcionarios: Funcionario[] = [];
+  pedidos: Pedido[] = [];
   
-  constructor(private service: FuncionarioService, private router: Router) { }
+  constructor(private service: PedidoService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.list().subscribe(funcionarios => {
-        this.funcionarios = funcionarios;  
-        console.log(funcionarios);
+    this.service.list().subscribe((pedido: Pedido[]) => {
+        this.pedidos = pedido;  
+        console.log(pedido);
     });
   }
 
   deletar(nome: string):void{
     console.log(this.deletar);
-    this.service.delete(nome).subscribe((nome) =>{
+    this.service.delete(nome).subscribe((nome: any) =>{
       console.log(nome);
-      this.router.navigate(["funcionario/listar"]);
+      this.router.navigate(["pedido/listar"]);
       this.ngOnInit
-      this.service.list().subscribe((funcionarios) => {
-        this.funcionarios = funcionarios;
-        console.log(this.funcionarios);
+      this.service.list().subscribe((pedidos: Pedido[]) => {
+        this.pedidos = pedidos;
+        console.log(this.pedidos);
       });
     });
-   
   }
 
 }

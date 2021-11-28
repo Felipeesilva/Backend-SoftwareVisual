@@ -1,0 +1,20 @@
+<h1 class="title" >Login</h1>
+
+<a class="home" routerLink="">Home</a>
+
+<div id="email">
+    <label class="campoLabel" for="email">Email:</label>
+    <input type="text" class="campoBox" name="email" [(ngModel)]="email">
+</div>
+<div id="senha">
+    <label class="campoLabel" for="senha">senha:</label>
+    <input type="text" class="campoBox" name="matriculaAdm" [(ngModel)]="matriculaAdm">
+</div>
+<div id="permissao">
+    <label class="campoLabel" for="permissao">Permissao:</label>
+    <input type="text" class="campoBox" name="permissao" [(ngModel)]="permissao">
+</div>
+
+<button class="cadastrar" (click)="cadastrar()">Cadastrar </button><br>
+
+

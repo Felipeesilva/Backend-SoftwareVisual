@@ -46,9 +46,9 @@ Realizar as alterações:
 Em app > components > Views realizar as seguintes alterações
 
 - Deletar o "Administrativo" e "Funcionario
-- Criar o "Login"
+- Criar o "Login" (Perguntar se muda o nome pra usuario)
 - Deletar a "Solicitação"
-- Criar o "Pedido"
+ok - Criar o "Pedido" 
 - Criar o area para cadastro dos "ItensDespesa"
 - O "Carrinho" do Professor vai ser a nossa area de "Despesas"
     (O Funcionario vai ir cadastrando os ItensDespesa e as mesmas vão ser inseridas ao "Carrinho"(Despesas), 
