@@ -1,4 +1,4 @@
-import { Administrativo } from '../../../../models/administrativo';
+import { Administrativo } from '../../../../models/usuario';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdministrativoService } from 'src/app/services/administrativo.service';

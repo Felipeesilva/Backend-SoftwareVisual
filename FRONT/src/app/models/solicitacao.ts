@@ -1,12 +1,12 @@
-import { Funcionario } from "./funcionario";
+import { Pedido } from './pedido';
+import { Despesa } from './despesa';
+
 
 export interface Solicitacao {
     id: number;
-    destino: string;
-    dataPartida: string;
-    dataRetorno: string;
-    finalidade: string;
-    funcionarioid: number;
-    funcionario?: Funcionario;
+    funcionario: String;
+    Pedido?: Pedido;
+    pedidoId: string;
+    Despesas?: Despesa;
     criadoem?: string;
 }

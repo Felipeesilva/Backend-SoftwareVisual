@@ -1,4 +1,4 @@
-import { Administrativo } from './../models/administrativo';
+import { Administrativo } from '../models/usuario';
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@Angular/common/http";
 import { Observable } from 'rxjs';
