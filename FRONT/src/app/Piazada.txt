@@ -1,0 +1,67 @@
+Como comentado no arquivo do Back agora o Trabalho passa a ter o seguinte fluxo
+
+1º Funcionario abre um "Pedido" informando os dados da sua viagem
+2º Administrativo aprova o "Pedido" do Funcionario - (Parte ainda não implementada no back)
+3º Funcionario registra a "Despesa" passando detalhes em "ItemDespesa"
+4º O "Pedido" e uma lista de "Despesas" são adicionados a "Solicitação"
+
+"O Funcionario vai cadastrar os Itens de uma Despesa informando os seguintes dados:
+    - Produto > Quantidade > Preço 
+Apos Informar os Itens da Despesa, os mesmos vao ser adicionados ao "Carrinho"(Despesa), 
+no Carrinho o funcionario tem que informar os seguintes dados:
+    - Lugar (Lugar onde o funcionario realizou a compra dos produtos);
+Finalizando assim o fluxo".
+
+Exemplo Final das Despesas:
+
+Lugar : Padaria
+{
+    {
+        Produto: Café
+        Quantidade: 1
+        Preço: 4.0
+    }
+    {
+        Produto: Misto
+        Quantidade: 1
+        Preço: 4.0
+    }
+}
+Lugar : Churras do Osvaldinho
+{
+    {
+        Produto: Bifão do Brunera
+        Quantidade: 1
+        Preço: 5000.00
+    }
+    {
+        Produto: Franguinho do Felipera
+        Quantidade: 1
+        Preço: 0.1 ("barateza pq não chamou a gente")
+    }
+}
+
+Realizar as alterações: 
+
+Em app > components > Views realizar as seguintes alterações
+
+- Deletar o "Administrativo" e "Funcionario
+- Criar o "Login"
+- Deletar a "Solicitação"
+- Criar o "Pedido"
+- Criar o area para cadastro dos "ItensDespesa"
+- O "Carrinho" do Professor vai ser a nossa area de "Despesas"
+    (O Funcionario vai ir cadastrando os ItensDespesa e as mesmas vão ser inseridas ao "Carrinho"(Despesas), 
+    após finalizar o cadastro, uma Lista de Despesas vai ser acrescentada a "Solicitação")
+
+- A Pasta "Template" é o arquivo inicial, as informações da "Views" são inseridas no "Template"
+
+Em app > models = adicionar igual a "Models" do back
+
+Em app > services = Seguir os exemplos ja feitos
+
+* Não esquecer de Adicionar a rota em app-routing.modules.ts
+
+* Não esquecer de Injestar as Dependenciar dos components e AngularMaterial em app.modules.ts
+
+Ai só seguir o fluxo e a logica do professor rapaziada >)

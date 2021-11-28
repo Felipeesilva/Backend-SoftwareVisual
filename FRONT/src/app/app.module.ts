@@ -17,6 +17,7 @@ import { ListarSolicitacaoComponent } from './components/views/solicitacao/lista
 import { CadastrarSolicitacaoComponent } from './components/views/solicitacao/cadastrar-solicitacao/cadastrar-solicitacao.component';
 import { EditarSolicitacaoComponent } from './components/views/solicitacao/editar-solicitacao/editar-solicitacao.component';
 import { HomeComponent } from './components/views/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -42,7 +43,8 @@ import { HomeComponent } from './components/views/home/home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
