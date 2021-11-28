@@ -1,0 +1,31 @@
+### Cadastrar um novo Pedido
+POST https://localhost:5001/api/pedido/create
+Content-Type: application/json
+
+{
+    "Destino" : "Europa",
+    "DataPartida": "01/01/2021",
+    "DataRetorno": "01/01/2022",
+    "Finalidade": "Pesquisa"
+}
+
+### Listar todos os pedidos
+GET https://localhost:5001/api/pedido/list
+
+### Buscar um pedido pelo id
+GET https://localhost:5001/api/pedido/getbyid/1
+
+### Deletar um pedido pelo id
+DELETE https://localhost:5001/api/pedido/delete/1
+
+### Alterar um pedido
+PUT https://localhost:5001/api/pedido/update
+Content-Type: application/json
+
+{
+    "Id" : 1,
+    "Destino" : "Europa",
+    "DataPartida": "01/01/2021",
+    "DataRetorno": "01/02/2021",
+    "Finalidade": "Pesquisa"
+}

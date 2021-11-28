@@ -1,0 +1,17 @@
+Conectar ao Azure no appSettings.js
+
+"ConnectionStrings": {
+        "Azure": "Server=tcp:desenvolvimento-software.database.windows.net,1433;Initial Catalog=terca_noite;Persist Security Info=False;User ID=adm;Password=D3senvolvimento;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+    }
+
+Administrativo e Funcionario passaram a ser "Usuario" com permissões de:
+
+- Administrativo : "Adm"
+- Funcionario : "User"
+
+Fluxo = 
+
+1º Funcionario abre um "Pedido" informando os dados da sua viagem
+2º Administrativo aprova o "Pedido" do Funcionario
+3º Funcionario registra a "Despesa" passando detalhes em "ItemDespesa"
+4º Seu "Pedido" e uma lista de "Despesas" é adicionado a "Solicitação"

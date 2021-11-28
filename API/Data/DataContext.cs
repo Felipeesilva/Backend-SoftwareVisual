@@ -11,12 +11,12 @@ namespace API.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options)   { }
     
         //Lista de propriedades que vão virar tabela no banco
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<ItemDespesa> ItensDespesa { get; set; }
+        public DbSet<Despesa> Despesas { get; set; }
 
-        public DbSet<Funcionario> Funcionarios { get; set; }
-
-        public DbSet<Administrativo> Administrativos { get; set; }
-
-        public DbSet<Solicitacao> Solicitacoes { get; set; }
+        
 
         
     }

@@ -1,0 +1,15 @@
+### Cadastrar uma nova Despesa
+POST https://localhost:5001/api/despesa/create
+Content-Type: application/json
+
+{
+    "Lugar": "Padaria",
+    "ItensId" : 2,
+    "CarrinhoId" : "f34e722e-bb9a-446a-998b-fa080df9ac1d"
+}
+
+### Listar todas as Despesas
+GET https://localhost:5001/api/despesa/list
+
+### Carrinho
+GET https://localhost:5001/api/despesa/getbycartid/f34e722e-bb9a-446a-998b-fa080df9ac1d

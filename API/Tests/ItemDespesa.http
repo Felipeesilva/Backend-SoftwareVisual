@@ -1,0 +1,29 @@
+### Cadastrar um novo ItemDespesa
+POST https://localhost:5001/api/itemDespesa/create
+Content-Type: application/json
+
+{
+    "Produto" : "Café",
+    "Quantidade": 1,
+    "Preco": 4.0
+}
+
+### Listar todos os Itens da Despesa
+GET https://localhost:5001/api/itemDespesa/list
+
+### Buscar um Item da Despesa pelo id
+GET https://localhost:5001/api/itemDespesa/getbyid/1
+
+### Deletar um Item da Despesa pelo nome do Produto
+DELETE https://localhost:5001/api/itemDespesa/delete/Mercado
+
+### Alterar um Item da Despesa
+PUT https://localhost:5001/api/itemDespesa/update
+Content-Type: application/json
+
+{
+    "Id" : 1,
+    "Produto" : "Pãozinho",
+    "Quantidade": 1,
+    "Preco": 5.0
+}
