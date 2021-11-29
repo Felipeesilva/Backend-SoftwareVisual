@@ -45,7 +45,7 @@ Realizar as alterações:
 
 Em app > components > Views realizar as seguintes alterações
 
-- Deletar o "Administrativo" e "Funcionario
+OK- Deletar o "Administrativo" e "Funcionario
 - Criar o "Login" (Perguntar se muda o nome pra usuario)
 - Deletar a "Solicitação"
 ok - Criar o "Pedido" 
@@ -56,7 +56,7 @@ ok - Criar o "Pedido"
 
 - A Pasta "Template" é o arquivo inicial, as informações da "Views" são inseridas no "Template"
 
-Em app > models = adicionar igual a "Models" do back
+OK Em app > models = adicionar igual a "Models" do back
 
 Em app > services = Seguir os exemplos ja feitos
 

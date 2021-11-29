@@ -4,7 +4,7 @@ export interface Despesa
 {
   id?: number;
   lugar: string;
-  ItemDespesa?: ItemDespesa;
+  itemDespesa?: ItemDespesa;
   itensId: number;
   carrinhoId: string;
   criadoem?: string;

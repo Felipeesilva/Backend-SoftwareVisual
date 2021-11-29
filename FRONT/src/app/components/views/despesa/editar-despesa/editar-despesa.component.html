@@ -1,0 +1,29 @@
+<h1 class="title" >Pedido</h1>
+
+<a class="home" routerLink="">Home</a>
+<a class="home" routerLink="/pedido/listar">Listar</a>
+
+<div id="id">
+    <label class="campoLabel" for="id">Id:</label>
+    <input class="campoBox" type="text" name="id" [(ngModel)]="id">
+</div>
+<div id="lugar">
+    <label class="campoLabel" for="destino">Lugar:</label>
+    <input type="text" class="campoBox" name="lugar" [(ngModel)]="lugar">
+</div>
+<div id="itemDespesa">
+    <label class="campoLabel" for="itemDespesa">Item Despesa:</label>
+    <input type="text" class="campoBox" name="dataRetorno" [(ngModel)]="dataRetorno">
+</div>
+<div id="itensId">
+    <label class="campoLabel" for="intesId">ItensId:</label>
+    <input type="text" class="campoBox" name="itensId" [(ngModel)]="itensId">
+</div>
+<div id="carrinhoId">
+    <label class="campoLabel" for="carrinhoId">id do carrinho:</label>
+    <input type="text" class="campoBox" name="carrinhoId" [(ngModel)]="carrinhoId">
+</div>
+
+
+<button class="cadastrar" (click)="editar()">Editar despesa</button><br>
+

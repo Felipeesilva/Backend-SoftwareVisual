@@ -1,4 +1,4 @@
-import { Solicitacao } from './../models/solicitacao';
+import { Solicitacao } from '../models/solicitacao';
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@Angular/common/http";
 import { Observable } from 'rxjs';

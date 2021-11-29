@@ -1,0 +1,15 @@
+<h1 class="title" >LISTAR</h1>
+<a class="campoBox" routerLink="">Home</a>
+
+<a class="campoBox" routerLink="/despesa/cadastrar">Cadastrar</a>
+
+<ol>
+    <h3 class="listar">Lista de despesa</h3>
+    <li class="campoLi" *ngFor="let pedido of pedidos">
+        <h4>#{{ despesa.id}}</h4>
+        <h4>despesa: {{ despesa.id }}</h4>
+        <button class="listButton" routerLink="/despesa/update/{{ despesa.id }}">Editar</button>
+        <button class="listButton" (click)="deletar(despesa.id)">Deletar</button>
+    </li>
+</ol><br>
+
