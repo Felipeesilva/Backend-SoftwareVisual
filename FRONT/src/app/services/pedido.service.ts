@@ -1,4 +1,4 @@
-import { Solicitacao } from '../models/solicitacao';
+import { Pedido } from 'src/app/models/pedido';
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@Angular/common/http";
 import { Observable } from 'rxjs';
@@ -6,32 +6,32 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class SolicitacaoService {
+export class PedidoService {
   
-  private baseUrl = "http://localhost:5000/api/solicitacao";
+  private baseUrl = "http://localhost:5000/api/pedido";
 
   constructor(private http: HttpClient) { }
 
-  list(): Observable<Solicitacao[]> {
-    return this.http.get<Solicitacao[]>(`${this.baseUrl}/list `);
+  list(): Observable<Pedido[]> {
+    return this.http.get<Pedido[]>(`${this.baseUrl}/list `);
   }
 
-  create(solicitacao: Solicitacao): Observable<Solicitacao> {
-    return this.http.post<Solicitacao>(`${this.baseUrl}/create`, solicitacao);
+  create(pedido: Pedido): Observable<Pedido> {
+    return this.http.post<Pedido>(`${this.baseUrl}/create`, pedido);
   }
 
-  find(id: Number): Observable<Solicitacao> {
-    return this.http.get<Solicitacao>(`${this.baseUrl}/getbyid/${id}`);
+  find(id: Number): Observable<Pedido> {
+    return this.http.get<Pedido>(`${this.baseUrl}/getbyid/${id}`);
   }
 
-  findByFuncionarioId(funcionarioId: Number): Observable<Solicitacao[]> {
-    return this.http.get<Solicitacao[]>(`${this.baseUrl}/getbyfuncionarioid/${funcionarioId}`);
+  findByPedidoId(pedidoId: Number): Observable<Pedido[]> {
+    return this.http.get<Pedido[]>(`${this.baseUrl}/getbypedidoId/${pedidoId}`);
   }
   
-  delete(id: number): Observable<Solicitacao> {
-    return this.http.delete<Solicitacao>(`${this.baseUrl}/delete/${id}`);
+  delete(id: number): Observable<Pedido> {
+    return this.http.delete<Pedido>(`${this.baseUrl}/delete/${id}`);
   }
-  update(solicitacao: Solicitacao): Observable<Solicitacao> {
-    return this.http.put<Solicitacao>(`${this.baseUrl}/update`, solicitacao);
+  update(pedido: Pedido): Observable<Pedido> {
+    return this.http.put<Pedido>(`${this.baseUrl}/update`, pedido);
   }
 }

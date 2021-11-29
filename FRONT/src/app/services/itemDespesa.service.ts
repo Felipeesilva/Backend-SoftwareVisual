@@ -1,35 +1,35 @@
+import { ItemDespesa } from 'src/app/models/itemDespesa';
 import { Injectable } from '@angular/core';
-import { Funcionario } from '../models/funcionario';
 import { HttpClient } from "@Angular/common/http";
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FuncionarioService {
+export class ItemDespesaService {
  
 
-  private baseUrl = "http://localhost:5000/api/funcionario";
+  private baseUrl = "http://localhost:5000/api/itemDespesa";
 
   constructor(private http: HttpClient) { }
 
-  list(): Observable<Funcionario[]> {
-    return this.http.get<Funcionario[]>(`${this.baseUrl}/list `);
+  list(): Observable<ItemDespesa[]> {
+    return this.http.get<ItemDespesa[]>(`${this.baseUrl}/list `);
   }
 
-  create(funcionario: Funcionario): Observable<Funcionario> {
-    return this.http.post<Funcionario>(`${this.baseUrl}/create`, funcionario);
+  create(itemDespesa: ItemDespesa): Observable<ItemDespesa> {
+    return this.http.post<ItemDespesa>(`${this.baseUrl}/create`, itemDespesa);
   }
 
-  delete(nome: string): Observable<Funcionario> {
-    return this.http.delete<Funcionario>(`${this.baseUrl}/delete/${nome}`);
+  delete(nome: string): Observable<ItemDespesa> {
+    return this.http.delete<ItemDespesa>(`${this.baseUrl}/delete/${nome}`);
   }
 
-  find(id: Number): Observable<Funcionario> {
-    return this.http.get<Funcionario>(`${this.baseUrl}/getbyid/${id}`);
+  find(id: Number): Observable<ItemDespesa> {
+    return this.http.get<ItemDespesa>(`${this.baseUrl}/getbyid/${id}`);
   }
   
-  update(funcionario: Funcionario): Observable<Funcionario> {
-    return this.http.put<Funcionario>(`${this.baseUrl}/update`, funcionario);
+  update(itemDespesa: ItemDespesa): Observable<ItemDespesa> {
+    return this.http.put<ItemDespesa>(`${this.baseUrl}/update`, itemDespesa);
   }
 }
