@@ -17,13 +17,13 @@ Content-Type: application/json
     "Senha" : "12345"
 }
 
-### Sem autenticação
-GET https://localhost:5001/api/usuario/sem
+# ### Sem autenticação
+# GET https://localhost:5001/api/usuario/sem
 
-### Com autenticação
-GET https://localhost:5001/api/usuario/com
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRpb2dvQGdlcm1hbm8uY29tIiwicm9sZSI6InVzZXIiLCJuYmYiOjE2MzgwNzc1MzUsImV4cCI6MTYzODA4NDczNSwiaWF0IjoxNjM4MDc3NTM1fQ.JHsbA6K-oPle_UY7b-f4FUu9om6fTzI5-Xe4SHhSmD0
+# ### Com autenticação
+# GET https://localhost:5001/api/usuario/com
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRpb2dvQGdlcm1hbm8uY29tIiwicm9sZSI6InVzZXIiLCJuYmYiOjE2MzgwNzc1MzUsImV4cCI6MTYzODA4NDczNSwiaWF0IjoxNjM4MDc3NTM1fQ.JHsbA6K-oPle_UY7b-f4FUu9om6fTzI5-Xe4SHhSmD0
 
-### Com permissão
-GET https://localhost:5001/api/usuario/permissao
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Imd1c3Rhdm9AZ2VybWFuby5jb20iLCJyb2xlIjoiYWRtIiwibmJmIjoxNjM4MDc3NTk3LCJleHAiOjE2MzgwODQ3OTcsImlhdCI6MTYzODA3NzU5N30.g9Wp0i8g6riLWWeqSXzp4vQvzga_Tysp7rlxY_3PCt4
+# ### Com permissão
+# GET https://localhost:5001/api/usuario/permissao
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Imd1c3Rhdm9AZ2VybWFuby5jb20iLCJyb2xlIjoiYWRtIiwibmJmIjoxNjM4MDc3NTk3LCJleHAiOjE2MzgwODQ3OTcsImlhdCI6MTYzODA3NzU5N30.g9Wp0i8g6riLWWeqSXzp4vQvzga_Tysp7rlxY_3PCt4
