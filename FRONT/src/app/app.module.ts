@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CadastrarUsuarioComponent } from './components/views/login/cadastrar-login/cadastrar-login.component';
-import { EditarUsuarioComponent } from './components/views/login/editar-login/editar-login.component';
 
 
 import { CadastrarPedidoComponent } from './components/views/pedido/cadastrar-pedido/cadastrar-pedido.component';
@@ -32,7 +31,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     CadastrarUsuarioComponent,
-    EditarUsuarioComponent,
     CadastrarPedidoComponent,
     ListarPedidoComponent,
     EditarPedidoComponent,

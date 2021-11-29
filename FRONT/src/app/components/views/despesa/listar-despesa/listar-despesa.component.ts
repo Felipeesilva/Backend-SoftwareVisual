@@ -21,7 +21,7 @@ export class ListarDespesaComponent implements OnInit {
     });
   }
 
-  deletar(id: string):void{
+  deletar(id: number):void{
     console.log(this.deletar);
     this.service.delete(id).subscribe((id: any) =>{
       console.log(id);

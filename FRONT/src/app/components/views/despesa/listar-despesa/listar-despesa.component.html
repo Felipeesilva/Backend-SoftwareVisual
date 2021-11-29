@@ -5,11 +5,11 @@
 
 <ol>
     <h3 class="listar">Lista de despesa</h3>
-    <li class="campoLi" *ngFor="let pedido of pedidos">
+    <li class="campoLi" *ngFor="let despesa of despesas">
         <h4>#{{ despesa.id}}</h4>
         <h4>despesa: {{ despesa.id }}</h4>
         <button class="listButton" routerLink="/despesa/update/{{ despesa.id }}">Editar</button>
-        <button class="listButton" (click)="deletar(despesa.id)">Deletar</button>
+        <!-- <button class="listButton" (click)="delete(despesa.id)">Deletar</button> -->
     </li>
 </ol><br>
 

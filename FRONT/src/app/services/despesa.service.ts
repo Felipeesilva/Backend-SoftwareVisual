@@ -21,10 +21,10 @@ export class DespesaService {
     return this.http.post<Despesa>(`${this.baseUrl}/create`, despesa);
   }
 
-  delete(id: string): Observable<Despesa> {
+  delete(id: number): Observable<Despesa> {
     return this.http.delete<Despesa>(`${this.baseUrl}/delete/${id}`);
   }
-  
+
   update(despesa: Despesa): Observable<Despesa> {
     return this.http.put<Despesa>(`${this.baseUrl}/update`, despesa);
   }

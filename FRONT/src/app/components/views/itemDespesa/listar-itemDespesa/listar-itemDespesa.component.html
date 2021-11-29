@@ -7,9 +7,9 @@
     <h3 class="listar">Lista de Itens Despesas</h3>
     <li class="campoLi" *ngFor="let itemDespesa of itemDespesas">
         <h4>#{{ itemDespesa.id}}</h4>
-        <h4>itemDespesa: {{ itemDespesa.destino }}</h4>
+        <h4>itemDespesa: {{ itemDespesa.id }}</h4>
         <button class="listButton" routerLink="/itemDespesa/update/{{ itemDespesa.id }}">Editar</button>
-        <button class="listButton" (click)="deletar(itemDespesa.id)">Deletar</button>
+        <!-- <button class="listButton" (click)="deletar(itemDespesa.id)">Deletar</button> -->
     </li>
 </ol><br>
 

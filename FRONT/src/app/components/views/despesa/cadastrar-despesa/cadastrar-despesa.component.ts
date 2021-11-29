@@ -25,7 +25,7 @@ export class CadastrarDespesaComponent implements OnInit {
   cadastrar(): void {
     let despesa: Despesa = {
       lugar:this.lugar,
-      ItemDespesa: this.itemDespesa,
+      itemDespesa: this.itemDespesa,
       itensId: this.itensId,
       carrinhoId: this.carrinhoId,
       criadoem!: this.criadoEm

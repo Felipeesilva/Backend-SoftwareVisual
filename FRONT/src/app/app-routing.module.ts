@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { CadastrarUsuarioComponent } from './components/views/login/cadastrar-login/cadastrar-login.component';
-import { EditarUsuarioComponent } from './components/views/login/editar-login/editar-login.component';
 
 
 import { CadastrarPedidoComponent } from './components/views/pedido/cadastrar-pedido/cadastrar-pedido.component';
@@ -36,11 +35,6 @@ const routes: Routes = [
     path: "usuario/create",
     component: CadastrarUsuarioComponent
   },
-  {
-    path: "usuario/update/:id",
-    component: EditarUsuarioComponent,
-  },
-  
 
   {
     // Home

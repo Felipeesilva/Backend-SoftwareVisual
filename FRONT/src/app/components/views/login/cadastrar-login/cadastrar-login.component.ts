@@ -1,12 +1,12 @@
 import { Usuario } from './../../../../models/usuario';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UsuarioService } from 'src/app/services/usuario.service';
+import { Login } from 'src/app/services/login.service';
 
 @Component({
-  selector: 'app-cadastrar-usuario',
-  templateUrl: './cadastrar-usuario.component.html',
-  styleUrls: ['./cadastrar-usuario.component.css']
+  selector: 'app-cadastrar-login',
+  templateUrl: './cadastrar-login.component.html',
+  styleUrls: ['./cadastrar-login.component.css']
 })
 export class CadastrarUsuarioComponent implements OnInit {
 
@@ -14,7 +14,7 @@ export class CadastrarUsuarioComponent implements OnInit {
   senha!: string;
   permissao!: string;
 
-  constructor(private router: Router, private service: UsuarioService) { }
+  constructor(private router: Router, private service: Login) { }
 
   ngOnInit(): void {}
 
@@ -25,9 +25,9 @@ export class CadastrarUsuarioComponent implements OnInit {
       permissao: this.permissao
 
     };
-    this.service.create(usuario).subscribe((usuario: any) => {
-      console.log(usuario);
-      this.router.navigate(["usuario/listar"]);
-    });
+    // this.service.create(usuario).subscribe((usuario: any) => {
+    //   console.log(usuario);
+    //   this.router.navigate(["usuario/listar"]);
+    // });
   }
 }

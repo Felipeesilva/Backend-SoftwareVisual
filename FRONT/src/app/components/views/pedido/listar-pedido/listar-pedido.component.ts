@@ -21,10 +21,10 @@ export class ListarPedidoComponent implements OnInit {
     });
   }
 
-  deletar(nome: string):void{
+  deletar(id: number):void{
     console.log(this.deletar);
-    this.service.delete(nome).subscribe((nome: any) =>{
-      console.log(nome);
+    this.service.delete(id).subscribe((id: any) =>{
+      console.log(id);
       this.router.navigate(["pedido/listar"]);
       this.ngOnInit
       this.service.list().subscribe((pedidos: Pedido[]) => {
