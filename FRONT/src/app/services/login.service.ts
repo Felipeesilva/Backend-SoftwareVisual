@@ -1,4 +1,4 @@
-import { Administrativo } from '../models/usuario';
+import { Usuario } from '../models/usuario';
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@Angular/common/http";
 import { Observable } from 'rxjs';
@@ -6,25 +6,19 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AdministrativoService {
+export class Login {
  
 
-  private baseUrl = "http://localhost:5000/api/administrativo";
+  private baseUrl = "http://localhost:5000/api/usuario";
 
   constructor(private http: HttpClient) { }
 
-  list(): Observable<Administrativo[]> {
-    return this.http.get<Administrativo[]>(`${this.baseUrl}/list `);
+  list(): Observable<Login[]> {
+    return this.http.get<Login[]>(`${this.baseUrl}/list `);
   }
 
-  create(administrativo: Administrativo): Observable<Administrativo> {
-    return this.http.post<Administrativo>(`${this.baseUrl}/create`, administrativo);
+  create(login: Login): Observable<Login> {
+    return this.http.post<Login>(`${this.baseUrl}/create`, login);
   }
 
-  delete(responsavel: string): Observable<Administrativo> {
-    return this.http.delete<Administrativo>(`${this.baseUrl}/delete/${responsavel}`);
-  }
-  update(administrativo: Administrativo): Observable<Administrativo> {
-    return this.http.put<Administrativo>(`${this.baseUrl}/update`, administrativo);
-  }
 }

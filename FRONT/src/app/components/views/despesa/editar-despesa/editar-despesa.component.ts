@@ -18,7 +18,7 @@ export class EditarDespesaComponent implements OnInit {
   carrinhoId!: string;
   criadoEm!: string;
 
-  constructor(private router: Router, private service: PedidoService) {}
+  constructor(private router: Router, private service: DespesaService) {}
 
   ngOnInit(): void {}
 

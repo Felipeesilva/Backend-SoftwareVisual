@@ -13,18 +13,19 @@ export class DespesaService {
 
   constructor(private http: HttpClient) { }
 
-  list(): Observable<Despsa[]> {
-    return this.http.get<Administrativo[]>(`${this.baseUrl}/list `);
+  list(): Observable<Despesa[]> {
+    return this.http.get<[]>(`${this.baseUrl}/list `);
   }
 
-  create(administrativo: Administrativo): Observable<Administrativo> {
-    return this.http.post<Administrativo>(`${this.baseUrl}/create`, administrativo);
+  create(despesa: Despesa): Observable<Despesa> {
+    return this.http.post<Despesa>(`${this.baseUrl}/create`, despesa);
   }
 
-  delete(responsavel: string): Observable<Administrativo> {
-    return this.http.delete<Administrativo>(`${this.baseUrl}/delete/${responsavel}`);
+  delete(id: string): Observable<Despesa> {
+    return this.http.delete<Despesa>(`${this.baseUrl}/delete/${id}`);
   }
-  update(administrativo: Administrativo): Observable<Administrativo> {
-    return this.http.put<Administrativo>(`${this.baseUrl}/update`, administrativo);
+  
+  update(despesa: Despesa): Observable<Despesa> {
+    return this.http.put<Despesa>(`${this.baseUrl}/update`, despesa);
   }
 }

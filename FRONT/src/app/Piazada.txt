@@ -46,7 +46,7 @@ Realizar as alterações:
 Em app > components > Views realizar as seguintes alterações
 
 OK- Deletar o "Administrativo" e "Funcionario
-- Criar o "Login" (Perguntar se muda o nome pra usuario)
+ok- Criar o "Login" (Perguntar se muda o nome pra usuario)
 - Deletar a "Solicitação"
 ok - Criar o "Pedido" 
 - Criar o area para cadastro dos "ItensDespesa"

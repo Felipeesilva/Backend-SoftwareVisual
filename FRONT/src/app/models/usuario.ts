@@ -3,6 +3,6 @@ export interface Usuario {
     email: string;
     senha: string;
     permissao: string;
-    token: string;
+    token?: string;
     criadoem?: string;
 }

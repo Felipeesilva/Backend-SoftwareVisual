@@ -8,14 +8,39 @@
 <mat-sidenav-container class="container">
     <mat-sidenav #sidenav mode="side" class="sidenav">
         <mat-nav-list>
+            
+            <a mat-list-item routerLink="/login/cadastrar">
+                <mat-icon mat-list-icon>add</mat-icon>
+                Item despesa</a
+            >
             <a mat-list-item routerLink="/pedido/cadastrar">
                 <mat-icon mat-list-icon>add</mat-icon>
-                Cadastrar Pedido</a
+                Pedido</a
             >
             <a mat-list-item routerLink="/pedido/listar">
                 <mat-icon mat-list-icon>list</mat-icon>
                 Listar Pedidos</a
             >
+            <a mat-list-item routerLink="/despesa/cadastrar">
+                <mat-icon mat-list-icon>add</mat-icon>
+                Despesa</a
+            >
+            <a mat-list-item routerLink="/despesa/listar">
+                <mat-icon mat-list-icon>list</mat-icon>
+                Listar despesa</a
+            >
+
+            <a mat-list-item routerLink="/itemDespesa/cadastrar">
+                <mat-icon mat-list-icon>add</mat-icon>
+                Item despesa</a
+            >
+
+            <a mat-list-item routerLink="/itemDespesa/listar">
+                <mat-icon mat-list-icon>list</mat-icon>
+                lista Item </a
+            >
+
+            
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

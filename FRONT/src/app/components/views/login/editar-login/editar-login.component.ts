@@ -13,7 +13,7 @@ export class EditarUsuarioComponent implements OnInit {
   email!: string;
   senha!: string;
   permissao!: string;
-  token!: string;
+
 
   constructor(private router: Router, private service: UsuarioService) {}
 
@@ -23,8 +23,7 @@ export class EditarUsuarioComponent implements OnInit {
       let usuario: Usuario = {
           email: this.email,
           senha: this.senha,
-          permissao: this.permissao,
-          token: this.token
+          permissao: this.permissao
       };
       this.service.update(usuario).subscribe((usuario: any) => {
           console.log(usuario);
